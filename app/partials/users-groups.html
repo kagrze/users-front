@@ -1,0 +1,15 @@
+<p>
+    User: {{user.name}}
+</p>
+<div ng-hide="userGroups.length == 0" class="table">
+    <p>User's groups:</p>
+    <div ng-repeat="group in userGroups" class="row">
+        <div class="first-column">{{group.name}}</div><a href="javascript:void(0)" ng-click="remove(group.id)">leave group</a>
+    </div>
+</div>
+<p ng-hide="userGroups.length != 0">
+    The user does not have any groups assigned
+</p>
+<p>
+    <a href="#/user/{{user.id}}/group">assign new group to the user</a>
+</p>

@@ -1,0 +1,11 @@
+<p>
+    Assign new group to user {{user.name}}
+</p>
+<form novalidate name="newUserGroupForm" class="css-form">
+    <div>
+        <div>Group:</div>
+        <select name="selectGroup" ng-options="group.name for group in allNonAssignedGroups track by group.id"
+                ng-model="selectedGroup" required="true"></select>
+    </div>
+    <input type="submit" value="Assign" ng-click="assign()" ng-disabled="newUserGroupForm.selectGroup.$error.required"/>
+</form>

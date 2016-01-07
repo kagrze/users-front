@@ -1,0 +1,12 @@
+{
+  "name": "users-front",
+  "description": "A front-end application for users and groups management",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kagrze/users-front",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-route": "1.4.8",
+    "angular-resource": "1.4.8"
+  }
+}

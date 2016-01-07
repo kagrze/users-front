@@ -1,0 +1,16 @@
+{
+  "name": "users-front",
+  "description": "A front-end application for users and groups management",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kagrze/users-front",
+  "private": true,
+  "devDependencies": {
+    "http-server": "0.8.5",
+    "bower": "1.7.2"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  }
+}

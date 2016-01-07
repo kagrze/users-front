@@ -1,0 +1,11 @@
+<div class="table">
+    <div ng-repeat="user in users" class="row">
+        <div class="first-column">{{user.name}}</div>
+        <div class="second-column">{{user.email}}</div>
+        <a href="#/user/{{user.id}}">manage group membership</a>
+        <a href="javascript:void(0)" ng-click="remove(user.id)">remove</a>
+    </div>
+</div>
+<p>
+    <a href="#/user">add new user</a>
+</p>
