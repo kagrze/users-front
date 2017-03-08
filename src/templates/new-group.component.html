@@ -1,0 +1,7 @@
+<form #newGroupForm="ngForm" class="css-form">
+    <div>
+        <div>Name:</div>
+        <input name="gName" [(ngModel)]="group.name" required/>
+    </div>
+    <input type="submit" value="Create" (click)="save()" [disabled]="!newGroupForm.valid"/>
+</form>

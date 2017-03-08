@@ -1,0 +1,11 @@
+<div class="table">
+    <div *ngFor="let user of users" class="row">
+        <div class="first-column">{{user.name}}</div>
+        <div class="second-column">{{user.email}}</div>
+        <a routerLink="/user/{{user.id}}">manage group membership</a>
+        <a routerLink="/users" (click)="remove(user)">remove</a>
+    </div>
+</div>
+<p>
+    <a routerLink="/user">add new user</a>
+</p>

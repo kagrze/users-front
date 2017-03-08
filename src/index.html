@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Users App</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('compiled/main.js').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<body>
+    <my-app>loading...</my-app>
+</body>
+</html>

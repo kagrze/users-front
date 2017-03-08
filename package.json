@@ -1,16 +1,33 @@
 {
   "name": "users-front",
   "description": "A front-end application for users and groups management",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/kagrze/users-front",
   "private": true,
   "devDependencies": {
-    "http-server": "0.8.5",
-    "bower": "1.7.2"
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10",
+    "@types/node": "^6.0.46"
+  },
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8000"
+    "build": "tsc -p src --outDir src/compiled",
+    "prebuild": "npm install",
+    "prestart": "npm run build",
+    "start": "lite-server -c=bs-config.json"
   }
 }

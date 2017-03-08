@@ -1,0 +1,14 @@
+<div *ngIf="user">
+    <p>
+        Assign a new group to user {{user.name}}
+    </p>
+    <form #newUserGroupForm="ngForm" class="css-form">
+        <div>
+            <div>Group:</div>
+            <select name="selectGroup" [(ngModel)]="newUsersGroupId" required>
+                <option *ngFor="let group of allNonAssignedGroups" [value]="group.id">{{group.name}}</option>
+              </select>
+        </div>
+        <input type="submit" value="Assign" (click)="assign()" [disabled]="!newUserGroupForm.valid"/>
+    </form>
+</div>

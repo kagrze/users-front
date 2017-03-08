@@ -1,0 +1,11 @@
+<form #newUserForm="ngForm" class="css-form">
+    <div>
+        <div>Name:</div>
+        <input [(ngModel)]="user.name" name="uName" required />
+    </div>
+    <div>
+        <div>E-mail:</div>
+        <input type="email" [(ngModel)]="user.email" name="uEmail" required />
+    </div>
+    <input type="submit" value="Create" (click)="save()" [disabled]="!newUserForm.valid" />
+</form>

@@ -1,0 +1,9 @@
+<div class="table">
+    <div *ngFor="let group of groups" class="row">
+        <div class="first-column">{{group.name}}</div>
+        <a routerLink="/groups" (click)="remove(group)">remove</a>
+    </div>
+</div>
+<p>
+    <a routerLink="/group">add new group</a>
+</p>

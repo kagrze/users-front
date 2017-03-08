@@ -1,0 +1,18 @@
+<div *ngIf="user">
+    <p>
+        User: {{user.name}}
+    </p>
+    <div *ngIf="userGroups.length != 0" class="table">
+        <p>User's groups:</p>
+        <div *ngFor="let group of userGroups" class="row">
+            <div class="first-column">{{group.name}}</div>
+            <a routerLink="/user/{{user.id}}" (click)="remove(group);">leave group</a>
+        </div>
+    </div>
+    <p *ngIf="userGroups.length == 0">
+        The user does not have any groups assigned
+    </p>
+    <p>
+        <a routerLink="/user/{{user.id}}/group">assign a new group to the user</a>
+    </p>
+</div>
