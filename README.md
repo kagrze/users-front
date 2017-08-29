@@ -5,6 +5,6 @@ A simple REST client written in [Angular](https://angular.io/) that demonstrates
 
 It is based on [quickstart](https://github.com/angular/quickstart) and is also inspired by [The Tour of Heroes](https://angular.io/docs/ts/latest/tutorial).
 
-It requires [users-back](https://github.com/kagrze/users-back) back-end to run properly.
+It requires [users-back](https://github.com/kagrze/users-back) or [users-back-py](https://github.com/kagrze/users-back-py) back-ends to run properly.
 
 To test it just type `npm start` and then go to [http://localhost:8000](http://localhost:8000).
